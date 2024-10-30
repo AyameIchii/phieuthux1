@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phiếu Thu</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif, sans-serif;
+            display: flex;
+            justify-content: center;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            font-size: 10pt; /* Cỡ chữ 10pt */
+        }
+
+        /* Container kích thước A5 (nửa tờ A4) */
+        .a5-page {
+            width: 148mm;
+            height: 210mm;
+            padding: 10mm;
+            background-color: white;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            box-sizing: border-box;
+        }
+
+        h1 {
+            text-align: center;
+            margin: 0;
+            font-size: 10pt; /* Tiêu đề lớn hơn một chút */
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+
+        .info-row {
+            margin: 5px 0;
+        }
+
+        .field-label {
+            
+        }
+
+        .amount {
+            font-size: 10pt; /* Cỡ chữ lớn hơn cho số tiền */
+            font-weight:;
+            text-align: left;
+            margin: 5px 0 ;
+        }
+
+        .amount-text {
+            text-align: left;
+            font-style: italic;
+            margin-bottom: 5px;
+        }
+
+        .signature-section {
+            margin-top: 10px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .sign-box {
+            font-size: 10pt; 
+            font-weight:bold;
+            text-align: center;
+            width: 25%;
+        }
+
+        .sign-line {
+            margin-top: 50px;
+            
+            width: 80%;
+            margin: 50px auto;
+        }
+
+        .note {
+            margin-top: 10px;
+            font-style: italic;
+            font-size: 9pt; /* Cỡ chữ nhỏ hơn cho phần ghi chú */
+        }
+
+        @media print {
+            body {
+                margin: 0;
+            }
+
+            .a5-page {
+                width: auto;
+                height: auto;
+                box-shadow: none;
+                page-break-after: always;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="a5-page">
+        <div class="header">
+            <div class="left">
+                Đơn vị: Trường THCS Cộng Hòa<br>
+                Mã QHNS: 1032015
+            </div>
+            <div class="right" style="text-align: right; ">
+                Mẫu số: C40-BB<br>
+                (Ban hành kèm theo Thông tư số 107/2017/TT-BTC ngày 10/10/2017 của Bộ Tài chính)
+            </div>
+        </div>
+        <h1>PHIẾU THU</h1>
+        
+        <div style="text-align: center;">
+            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Ngày ..... tháng ..... năm 2024 &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Quyển số:..........<br>
+            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Số: ..................... &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; Nợ:..................... &emsp;&emsp;&emsp;<br> 
+            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; Có:.....................
+        </div>
+        <div class="info-row">
+            <div><span class="field-label">Họ và tên người nộp tiền:</span> chỗ này điền tên</div>
+        </div>
+        <div class="info-row">
+            <div><span class="field-label">Địa chỉ:</span> Lớp: điền lớp </div>
+        </div>
+        <div class="info-row">
+            <div><span class="field-label">Nội dung:</span> Tiền bảo hiểm y tế năm học 2024 - 2025</div>
+        </div>
+        <div class="amount">Số tiền: 884.520đ</div>
+        <div class="amount-text">(Viết bằng chữ): Tám trăm tám mươi tư nghìn năm trăm hai mươi đồng.</div>
+        <div class="info-row">
+            <div><span class="field-label">Kèm theo:</span> ............................................................................................................................
+        </div>
+
+        <div class="signature-section">
+            <div class="sign-box">
+                THỦ TRƯỞNG ĐƠN VỊ<br>(Ký, họ tên, đóng dấu)
+                <div class="sign-line"></div>
+                Phan Thị Thanh Hương
+            </div>
+            <div class="sign-box">
+                KẾ TOÁN TRƯỞNG<br>(Ký, họ tên)
+                <div class="sign-line"></div>
+                Lê Thị Phương
+            </div>
+            <div class="sign-box">
+                NGƯỜI LẬP<br>(Ký, họ tên)
+                <div class="sign-line"></div>
+                Lê Thị Phương
+            </div>
+        </div>
+
+        <div class="info-row">
+            <div>Đã nhận đủ số tiền: Bằng số: 884.520 đồng<br>
+                Bằng chữ: tám trăm tám mươi tư nghìn năm trăm hai mươi đồng.</div>
+        </div>
+        <div class="info-row" style="text-align: right">
+            <div>Ngày ..... tháng ..... năm 2024</div>
+        </div>
+
+        <div class="signature-section">
+            <div class="sign-box">
+                NGƯỜI NỘP<br>(Ký, họ tên)
+                <div class="sign-line"></div>
+            </div>
+            <div class="sign-box">
+                
+                THỦ QUỸ<br>(Ký, họ tên)
+                <div class="sign-line"></div>
+                <div>Nguyễn Thị Ngạn</div>
+            </div>
+        </div>
+
+        <div class="info-row" style="margin-top: 10px;">
+        </div>
+
+        <div class="note">
+            + Tỷ giá ngoại tệ: ............................................................................................................................<br>
+            + Số tiền quy đổi: ............................................................................................................................
+        </div>
+    </div>        
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phiếu Thu</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif, sans-serif;
+            display: flex;
+            justify-content: center;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            font-size: 10pt; /* Cỡ chữ 10pt */
+        }
+
+        /* Container kích thước A5 (nửa tờ A4) */
+        .a5-page {
+            width: 148mm;
+            height: 210mm;
+            padding: 10mm;
+            background-color: white;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            box-sizing: border-box;
+        }
+
+        h1 {
+            text-align: center;
+            margin: 0;
+            font-size: 10pt; /* Tiêu đề lớn hơn một chút */
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+
+        .info-row {
+            margin: 5px 0;
+        }
+
+        .field-label {
+            
+        }
+
+        .amount {
+            font-size: 10pt; /* Cỡ chữ lớn hơn cho số tiền */
+            font-weight:;
+            text-align: left;
+            margin: 5px 0 ;
+        }
+
+        .amount-text {
+            text-align: left;
+            font-style: italic;
+            margin-bottom: 5px;
+        }
+
+        .signature-section {
+            margin-top: 10px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .sign-box {
+            font-size: 10pt; 
+            font-weight:bold;
+            text-align: center;
+            width: 25%;
+        }
+
+        .sign-line {
+            margin-top: 50px;
+            
+            width: 80%;
+            margin: 45px auto;
+        }
+
+        .note {
+            margin-top: 10px;
+            font-style: italic;
+            font-size: 9pt; /* Cỡ chữ nhỏ hơn cho phần ghi chú */
+        }
+
+        @media print {
+            body {
+                margin: 0;
+            }
+
+            .a5-page {
+                width: auto;
+                height: auto;
+                box-shadow: none;
+                page-break-after: always;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="a5-page">
+        <div class="header">
+            <div class="left">
+                Đơn vị: Trường THCS Cộng Hòa<br>
+                Mã QHNS: 1032015
+            </div>
+            <div class="right" style="text-align: right; ">
+                Mẫu số: C40-BB<br>
+                (Ban hành kèm theo Thông tư số 107/2017/TT-BTC ngày 10/10/2017 của Bộ Tài chính)
+            </div>
+        </div>
+        <h1>PHIẾU THU</h1>
+        
+        <div style="text-align: center;">
+            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Ngày ..... tháng ..... năm 2024 &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Quyển số:..........<br>
+            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Số: ..................... &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; Nợ:..................... &emsp;&emsp;&emsp;<br> 
+            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; Có:.....................
+        </div>
+        <div class="info-row">
+            <div><span class="field-label">Họ và tên người nộp tiền:</span> chỗ này điền tên</div>
+        </div>
+        <div class="info-row">
+            <div><span class="field-label">Địa chỉ:</span> Lớp: điền lớp </div>
+        </div>
+        <div class="info-row">
+            <div><span class="field-label">Nội dung:</span> Tiền bảo hiểm thân thể năm học 2024 - 2025</div>
+        </div>
+        <div class="amount">Số tiền: 120.000đ</div>
+        <div class="amount-text">(Viết bằng chữ): Một trăm hai mươi nghìn đồng.</div>
+        <div class="info-row">
+            <div><span class="field-label">Kèm theo:</span> ............................................................................................................................
+        </div>
+
+        <div class="signature-section">
+            <div class="sign-box">
+                THỦ TRƯỞNG ĐƠN VỊ<br>(Ký, họ tên, đóng dấu)
+                <div class="sign-line"></div>
+                Phan Thị Thanh Hương
+            </div>
+            <div class="sign-box">
+                KẾ TOÁN TRƯỞNG<br>(Ký, họ tên)
+                <div class="sign-line"></div>
+                Lê Thị Phương
+            </div>
+            <div class="sign-box">
+                NGƯỜI LẬP<br>(Ký, họ tên)
+                <div class="sign-line"></div>
+                Lê Thị Phương
+            </div>
+        </div>
+
+        <div class="info-row">
+            <div>Đã nhận đủ số tiền: Bằng số: 120.000 đồng.<br>
+                Bằng chữ: Một trăm hai mươi nghìn đồng.</div>
+        </div>
+        <div class="info-row" style="text-align: right">
+            <div>Ngày ..... tháng ..... năm 2024</div>
+        </div>
+
+        <div class="signature-section">
+            <div class="sign-box">
+                NGƯỜI NỘP<br>(Ký, họ tên)
+                <div class="sign-line"></div>
+            </div>
+            <div class="sign-box">
+                
+                THỦ QUỸ<br>(Ký, họ tên)
+                <div class="sign-line"></div>
+                <div>Nguyễn Thị Ngạn</div>
+            </div>
+        </div>
+
+        <div class="info-row" style="margin-top: 10px;">
+        </div>
+
+        <div class="note">
+            + Tỷ giá ngoại tệ: ............................................................................................................................<br>
+            + Số tiền quy đổi: ............................................................................................................................
+        </div>
+    </div>        
+</body>
+</html>
+
